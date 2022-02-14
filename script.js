@@ -26,8 +26,8 @@ function recalc() {
   // document.getElementById('timer').textContent = time;
   document.getElementById('day').textContent = counter[0];
   document.getElementById('hour').textContent = counter[1];
-  document.getElementById('min').textContent = counter[2];
-  document.getElementById('sec').textContent = counter[3];
+  document.getElementById('min').textContent = String(counter[2]).padStart(2, '0');
+  document.getElementById('sec').textContent = String(counter[3]).padStart(2, '0');
   refresh();
 }
 
