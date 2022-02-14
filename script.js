@@ -13,16 +13,21 @@ function countdown(due) {
   return count;
 }
 3
-let goal = new Date();
+const goal = new Date(2025, 4, 3);
+/*
 goal.setHours(23);
 goal.setMinutes(59);
 goal.setSeconds(59);
-
+*/
 // console.log(countdown(goal));
 function recalc() {
   const counter = countdown(goal);
-  const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
-  document.getElementById('timer').textContent = time;
+  // const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+  // document.getElementById('timer').textContent = time;
+  document.getElementById('day').textContent = counter[0];
+  document.getElementById('hour').textContent = counter[1];
+  document.getElementById('min').textContent = counter[2];
+  document.getElementById('sec').textContent = counter[3];
   refresh();
 }
 
